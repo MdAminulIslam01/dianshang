@@ -5,7 +5,9 @@ import {
   ChevronRight,
   Cpu,
   Gem,
+  HeartHandshake,
   Home,
+  LockKeyhole,
   MapPin,
   MessageCircle,
   Mic2,
@@ -13,7 +15,6 @@ import {
   Sparkles,
   Users,
   Wand2,
-  Zap,
 } from "lucide-react";
 import heroRobot from "./assets/hero-robot.png";
 import robotBusiness from "./assets/robot-business.png";
@@ -23,27 +24,27 @@ import robotHome from "./assets/robot-home.png";
 
 const products = [
   {
-    name: "曜影 E1",
-    positioning: "私人助理型",
+    name: "宸影 S1",
+    positioning: "私人亲密型",
     image: robotElegance,
-    description: "面向高净值家庭与私人空间，提供日程提醒、语音陪伴、家居联动与礼宾服务。",
-    tags: ["柔性仿生外观", "情绪识别", "私人日程"],
+    description: "面向成年人私人空间，主打情感互动、亲密陪伴、偏好记忆与高隐私定制体验。",
+    tags: ["成人AI性伴侣", "情感互动", "隐私定制"],
     price: "定制咨询",
   },
   {
-    name: "锦澜 B7",
-    positioning: "商务接待型",
+    name: "曜境 X7",
+    positioning: "奢华伴侣型",
     image: robotBusiness,
-    description: "适用于企业展厅、商务前台与品牌空间，以稳定交互和高级形象完成接待导览。",
-    tags: ["多语言接待", "展厅导览", "品牌定制"],
-    price: "项目报价",
+    description: "为高端住宅、会所与私人套房打造，强调沉浸陪伴、仪式感服务与专属形象配置。",
+    tags: ["高端私享", "关系偏好", "形象定制"],
+    price: "专属方案",
   },
   {
-    name: "云栖 H3",
-    positioning: "居家服务型",
+    name: "澜玥 A3",
+    positioning: "居家伴侣型",
     image: robotHome,
-    description: "连接智能家居与家庭服务场景，兼顾陪伴、提醒、环境控制与基础生活协助。",
-    tags: ["智能家居", "生活提醒", "安全看护"],
+    description: "兼顾日常生活陪伴、智能家居联动与夜间私密互动，让伴侣体验自然融入居家空间。",
+    tags: ["居家陪伴", "氛围联动", "主动关怀"],
     price: "预约方案",
   },
 ];
@@ -51,40 +52,51 @@ const products = [
 const features = [
   {
     icon: Sparkles,
-    title: "仿生外观系统",
-    text: "柔性面部表达、精密机身曲线与高端材质，让机器人自然融入家庭和商业空间。",
+    title: "高拟真仿生形象",
+    text: "柔性面部表达、精密机身曲线与高端材质，塑造更自然、更具陪伴感的成人伴侣形象。",
   },
   {
     icon: Mic2,
-    title: "自然语音交互",
-    text: "支持连续对话、意图理解与场景问答，适合接待、陪伴和日常助理任务。",
+    title: "亲密语音互动",
+    text: "支持连续对话、昵称偏好、语气风格与关系记忆，让互动从功能回应走向长期陪伴。",
   },
   {
     icon: BrainCircuit,
-    title: "情绪与场景识别",
-    text: "根据语气、距离和使用场景调整回应方式，让服务更克制、更体面。",
+    title: "情绪与关系感知",
+    text: "根据语气、距离、时间和场景调整回应方式，让亲密陪伴更有分寸、更懂边界。",
+  },
+  {
+    icon: HeartHandshake,
+    title: "成人伴侣模式",
+    text: "围绕成年人私密关系设计陪伴流程，支持情感互动、仪式感回应与个人偏好配置。",
+  },
+  {
+    icon: LockKeyhole,
+    title: "隐私与边界控制",
+    text: "成人私密场景支持独立权限、边界设定与敏感数据保护，确保互动始终由用户主动管理。",
   },
   {
     icon: Cpu,
-    title: "模块化定制",
-    text: "从外观、声音、接待话术到企业知识库，按项目需求完成专属配置。",
+    title: "全链路定制系统",
+    text: "从外观、声音、人格设定到居家流程，按个人审美和关系偏好完成专属配置。",
   },
 ];
 
 const scenes = [
-  { icon: Home, title: "家庭陪伴", text: "日程提醒、家居联动、轻量看护与日常陪伴。" },
-  { icon: Building2, title: "商务接待", text: "企业前台、样板间、展厅导览与贵宾迎宾。" },
-  { icon: Users, title: "展厅服务", text: "产品讲解、动线引导、品牌话术与互动体验。" },
-  { icon: ShieldCheck, title: "私人助理", text: "行程管理、提醒服务、访客识别与定制问答。" },
+  { icon: HeartHandshake, title: "成人性伴侣", text: "面向成年人私人空间，提供长期陪伴、情感互动与亲密关系定制。" },
+  { icon: Home, title: "居家私享", text: "与卧室、客厅、灯光和智能家居联动，营造更自然的陪伴氛围。" },
+  { icon: Users, title: "关系偏好定制", text: "支持称呼、语气、回应节奏、人格设定与互动边界的个性化配置。" },
+  { icon: Building2, title: "高端会所场景", text: "适用于私享空间、样板间与高端展厅，呈现科技感与奢华体验。" },
+  { icon: ShieldCheck, title: "隐私安全", text: "围绕成年人敏感使用场景建立权限、记录管理与本地化隐私保护方案。" },
 ];
 
 function App() {
   return (
     <main className="site-shell">
       <header className="nav">
-        <a className="brand" href="#top" aria-label="锦曜仿生科技首页">
-          <span className="brand-mark">JY</span>
-          <span>锦曜仿生科技</span>
+        <a className="brand" href="#top" aria-label="宸曜仿生首页">
+          <span className="brand-mark">CY</span>
+          <span>宸曜仿生</span>
         </a>
         <nav className="nav-links" aria-label="主导航">
           <a href="#products">产品</a>
@@ -96,21 +108,21 @@ function App() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Premium Bionic AI Robot</p>
-          <h1>高端智能仿生机器人</h1>
+          <p className="eyebrow">Luxury Bionic Companion</p>
+          <h1>成人AI仿生伴侣</h1>
           <p className="hero-text">
-            面向家庭陪伴、商务接待与私人助理场景，打造兼具高级外观、自然交互和可定制服务能力的机器人产品。
+            面向成年人私人空间，打造兼具高拟真外观、情感互动、亲密陪伴与隐私边界控制的高端性伴侣机器人。
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#contact">
-              预约产品顾问
+              预约私享顾问
               <ChevronRight size={18} strokeWidth={1.8} />
             </a>
-            <a className="secondary-button" href="#products">查看机器人系列</a>
+            <a className="secondary-button" href="#products">查看伴侣系列</a>
           </div>
           <div className="hero-metrics" aria-label="核心能力">
             <span>
-              <strong>4</strong>
+              <strong>5</strong>
               场景方案
             </span>
             <span>
@@ -123,32 +135,32 @@ function App() {
             </span>
           </div>
         </div>
-        <div className="hero-visual" aria-label="高端女性仿生机器人主视觉">
-          <img src={heroRobot} alt="高端女性仿生机器人半身主视觉" />
+        <div className="hero-visual" aria-label="高端成人仿生伴侣主视觉">
+          <img src={heroRobot} alt="高端成人仿生伴侣半身主视觉" />
         </div>
       </section>
 
       <section className="section intro-strip">
         <div>
-          <p className="eyebrow">Chengdu · Jinjiang</p>
-          <h2>为高端空间设计的 AI 仿生服务终端</h2>
+          <p className="eyebrow">Private · Luxury · Bionic</p>
+          <h2>为成年人私密关系设计的高端仿生伴侣</h2>
         </div>
         <p>
-          锦曜仿生科技聚焦机器人外观工程、语音交互与场景定制，用更克制、更可靠的产品语言服务商业与家庭空间。
+          宸曜仿生聚焦成人AI性伴侣、亲密陪伴交互与私享场景定制，用高拟真外观、稳定交互和严格隐私边界服务高端用户。
         </p>
       </section>
 
       <section className="section" id="products">
         <div className="section-heading">
-          <p className="eyebrow">Robot Collection</p>
-          <h2>机器人美女系列</h2>
-          <p>每一款都围绕真实使用场景设计，不做夸张噱头，只保留可交付的高级感与服务能力。</p>
+          <p className="eyebrow">Companion Collection</p>
+          <h2>成人仿生伴侣系列</h2>
+          <p>每一款都围绕成年人真实私密需求设计，强调高端审美、稳定陪伴、关系偏好与可控边界。</p>
         </div>
         <div className="product-grid">
           {products.map((product) => (
             <article className="product-card" key={product.name}>
               <div className="product-image">
-                <img src={product.image} alt={`${product.name}${product.positioning}机器人`} />
+                <img src={product.image} alt={`${product.name}${product.positioning}成人仿生伴侣`} />
               </div>
               <div className="product-content">
                 <div>
@@ -172,18 +184,18 @@ function App() {
         </div>
       </section>
 
-      <section className="wide-banner" aria-label="机器人展厅展示">
-        <img src={robotGallery} alt="多款高端女性仿生机器人展厅展示" />
+      <section className="wide-banner" aria-label="成人仿生伴侣展示">
+        <img src={robotGallery} alt="多款高端成人仿生伴侣展示" />
         <div className="banner-copy">
-          <p className="eyebrow">Showroom Ready</p>
-          <h2>从产品形象到场景话术，均可按项目定制</h2>
+          <p className="eyebrow">Private Companion System</p>
+          <h2>从外观、声音到关系偏好，均可按私享需求定制</h2>
         </div>
       </section>
 
       <section className="section" id="technology">
         <div className="section-heading compact">
-          <p className="eyebrow">Core Technology</p>
-          <h2>高级感来自可被感知的细节</h2>
+          <p className="eyebrow">Core Experience</p>
+          <h2>亲密陪伴来自可被信任的细节</h2>
         </div>
         <div className="feature-grid">
           {features.map((feature) => {
@@ -201,8 +213,8 @@ function App() {
 
       <section className="section scenes-section" id="scenes">
         <div className="section-heading compact">
-          <p className="eyebrow">Service Scenes</p>
-          <h2>覆盖从家庭到商业空间的核心场景</h2>
+          <p className="eyebrow">Private Scenes</p>
+          <h2>围绕成人私密陪伴的核心场景</h2>
         </div>
         <div className="scene-grid">
           {scenes.map((scene) => {
@@ -223,9 +235,9 @@ function App() {
       <section className="contact-section" id="contact">
         <div>
           <p className="eyebrow">Contact</p>
-          <h2>预约锦曜产品顾问</h2>
+          <h2>预约宸曜私享顾问</h2>
           <p>
-            当前网站为纯前端展示页，预约入口用于引导咨询。实际项目可继续接入表单、客服或企业微信。
+            当前网站为纯前端展示页，预约入口用于引导成人仿生伴侣咨询。实际项目可继续接入表单、客服或企业微信。
           </p>
         </div>
         <div className="contact-card">
@@ -235,24 +247,24 @@ function App() {
           </div>
           <div className="contact-row">
             <MessageCircle size={22} strokeWidth={1.7} />
-            <span>商务咨询：contact@jinyao-ai.cn</span>
+            <span>私享咨询：contact@chenyao-ai.cn</span>
           </div>
           <div className="contact-row">
             <Wand2 size={22} strokeWidth={1.7} />
-            <span>支持外观、声音、话术与场景流程定制</span>
+            <span>支持外观、声音、人格、亲密陪伴边界与私享流程定制</span>
           </div>
         </div>
       </section>
 
       <footer className="footer">
         <div className="brand">
-          <span className="brand-mark">JY</span>
-          <span>锦曜仿生科技</span>
+          <span className="brand-mark">CY</span>
+          <span>宸曜仿生</span>
         </div>
-        <p>高端智能仿生机器人展示与定制服务 · 成都锦江区东大路888号</p>
+        <p>高端成人AI仿生伴侣展示与定制服务 · 成都锦江区东大路888号</p>
         <span className="footer-badge">
           <Gem size={15} strokeWidth={1.7} />
-          Premium Bionic AI
+          Luxury Bionic Companion
         </span>
       </footer>
     </main>
