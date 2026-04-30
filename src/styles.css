@@ -471,7 +471,8 @@ h3 {
 
 .product-image {
   position: relative;
-  height: 430px;
+  aspect-ratio: 4 / 5;
+  height: auto;
   background: #151010;
   overflow: hidden;
 }
@@ -488,6 +489,7 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   transition: transform 520ms ease;
   filter: contrast(1.04) saturate(1.08);
 }
@@ -598,6 +600,7 @@ h3 {
   width: 100%;
   height: 500px;
   object-fit: cover;
+  object-position: center center;
   filter: contrast(1.06) saturate(1.08);
 }
 
@@ -780,10 +783,6 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .product-image {
-    height: 390px;
-  }
-
   .intro-strip,
   .section-heading,
   .contact-section,
@@ -873,10 +872,6 @@ h3 {
     grid-column: auto;
   }
 
-  .product-image {
-    height: 420px;
-  }
-
   .wide-banner {
     width: calc(100% - 32px);
     min-height: 340px;
@@ -903,10 +898,6 @@ h3 {
 
   .nav-links {
     justify-content: flex-start;
-  }
-
-  .product-image {
-    height: 360px;
   }
 
   .hero-visual {
