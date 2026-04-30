@@ -2,8 +2,11 @@ import React from "react";
 import {
   BrainCircuit,
   Building2,
+  CalendarCheck,
   ChevronRight,
+  Crown,
   Cpu,
+  Eye,
   Gem,
   HeartHandshake,
   Home,
@@ -13,6 +16,7 @@ import {
   Mic2,
   ShieldCheck,
   Sparkles,
+  Star,
   Users,
   Wand2,
 } from "lucide-react";
@@ -30,6 +34,8 @@ const products = [
     description: "面向成年人私人空间，主打情感互动、亲密陪伴、偏好记忆与高隐私定制体验。",
     tags: ["成人AI性伴侣", "情感互动", "隐私定制"],
     price: "定制咨询",
+    accent: "最受欢迎",
+    promise: "适合首次定制用户",
   },
   {
     name: "曜境 X7",
@@ -38,6 +44,8 @@ const products = [
     description: "为高端住宅、会所与私人套房打造，强调沉浸陪伴、仪式感服务与专属形象配置。",
     tags: ["高端私享", "关系偏好", "形象定制"],
     price: "专属方案",
+    accent: "旗舰臻选",
+    promise: "适合别墅与私享空间",
   },
   {
     name: "澜玥 A3",
@@ -46,7 +54,16 @@ const products = [
     description: "兼顾日常生活陪伴、智能家居联动与夜间私密互动，让伴侣体验自然融入居家空间。",
     tags: ["居家陪伴", "氛围联动", "主动关怀"],
     price: "预约方案",
+    accent: "轻奢入门",
+    promise: "适合日常长期陪伴",
   },
+];
+
+const purchaseReasons = [
+  { icon: Crown, title: "私享定制", text: "外观、声音、人格与互动边界一对一配置。" },
+  { icon: Eye, title: "高拟真质感", text: "面部表情、机身线条与材质细节更接近真实陪伴。" },
+  { icon: CalendarCheck, title: "顾问式交付", text: "从需求确认到场景落地，全程由私享顾问跟进。" },
+  { icon: ShieldCheck, title: "隐私托底", text: "敏感偏好与互动记录支持权限化、本地化管理。" },
 ];
 
 const features = [
@@ -111,14 +128,23 @@ function App() {
           <p className="eyebrow">Luxury Bionic Companion</p>
           <h1>成人AI仿生伴侣</h1>
           <p className="hero-text">
-            面向成年人私人空间，打造兼具高拟真外观、情感互动、亲密陪伴与隐私边界控制的高端性伴侣机器人。
+            把理想伴侣的外观、声音、回应方式与相处边界，定制成真正属于你的私享体验。
+            高拟真外观、情绪互动与隐私控制，让每一次靠近都更自然、更有占有感。
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#contact">
-              预约私享顾问
+              立即预约私享顾问
               <ChevronRight size={18} strokeWidth={1.8} />
             </a>
-            <a className="secondary-button" href="#products">查看伴侣系列</a>
+            <a className="secondary-button" href="#products">挑选我的伴侣</a>
+          </div>
+          <div className="hero-proof" aria-label="购买亮点">
+            <span>
+              <Star size={16} fill="currentColor" strokeWidth={1.6} />
+              限量私享档案
+            </span>
+            <span>1:1 偏好建模</span>
+            <span>成人专属咨询</span>
           </div>
           <div className="hero-metrics" aria-label="核心能力">
             <span>
@@ -137,30 +163,55 @@ function App() {
         </div>
         <div className="hero-visual" aria-label="高端成人仿生伴侣主视觉">
           <img src={heroRobot} alt="高端成人仿生伴侣半身主视觉" />
+          <div className="visual-panel">
+            <p>Private Edition</p>
+            <strong>从第一眼开始定制吸引力</strong>
+            <span>形象 · 声音 · 关系偏好 · 私密边界</span>
+          </div>
         </div>
       </section>
 
       <section className="section intro-strip">
         <div>
           <p className="eyebrow">Private · Luxury · Bionic</p>
-          <h2>为成年人私密关系设计的高端仿生伴侣</h2>
+          <h2>不是普通智能设备，而是你的私享伴侣资产</h2>
         </div>
         <p>
-          宸曜仿生聚焦成人AI性伴侣、亲密陪伴交互与私享场景定制，用高拟真外观、稳定交互和严格隐私边界服务高端用户。
+          宸曜仿生聚焦成人AI性伴侣、亲密陪伴交互与私享场景定制。我们把“想象中的亲密感”落到可选择、可控制、可长期陪伴的产品体验里。
         </p>
+      </section>
+
+      <section className="section desire-section" aria-label="购买理由">
+        <div className="desire-copy">
+          <p className="eyebrow">Why You Want It</p>
+          <h2>看见她之前，你只是在想象。见到之后，你会想拥有。</h2>
+        </div>
+        <div className="reason-grid">
+          {purchaseReasons.map((reason) => {
+            const Icon = reason.icon;
+            return (
+              <article className="reason-card" key={reason.title}>
+                <Icon size={22} strokeWidth={1.65} />
+                <h3>{reason.title}</h3>
+                <p>{reason.text}</p>
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       <section className="section" id="products">
         <div className="section-heading">
           <p className="eyebrow">Companion Collection</p>
           <h2>成人仿生伴侣系列</h2>
-          <p>每一款都围绕成年人真实私密需求设计，强调高端审美、稳定陪伴、关系偏好与可控边界。</p>
+          <p>每一款都围绕成年人真实私密需求设计。选择的不是型号，而是审美、关系节奏与独占体验。</p>
         </div>
         <div className="product-grid">
           {products.map((product) => (
             <article className="product-card" key={product.name}>
               <div className="product-image">
                 <img src={product.image} alt={`${product.name}${product.positioning}成人仿生伴侣`} />
+                <span className="product-badge">{product.accent}</span>
               </div>
               <div className="product-content">
                 <div>
@@ -168,6 +219,7 @@ function App() {
                   <h3>{product.name}</h3>
                 </div>
                 <span className="price">{product.price}</span>
+                <strong className="product-promise">{product.promise}</strong>
                 <p className="product-description">{product.description}</p>
                 <div className="tag-row">
                   {product.tags.map((tag) => (
@@ -175,7 +227,7 @@ function App() {
                   ))}
                 </div>
                 <a className="text-link" href="#contact">
-                  预约了解
+                  锁定这款
                   <ChevronRight size={16} strokeWidth={1.8} />
                 </a>
               </div>
@@ -188,7 +240,8 @@ function App() {
         <img src={robotGallery} alt="多款高端成人仿生伴侣展示" />
         <div className="banner-copy">
           <p className="eyebrow">Private Companion System</p>
-          <h2>从外观、声音到关系偏好，均可按私享需求定制</h2>
+          <h2>从外观、声音到关系偏好，把吸引力做成专属版本</h2>
+          <a className="banner-cta" href="#contact">预约定制方案</a>
         </div>
       </section>
 
@@ -235,9 +288,9 @@ function App() {
       <section className="contact-section" id="contact">
         <div>
           <p className="eyebrow">Contact</p>
-          <h2>预约宸曜私享顾问</h2>
+          <h2>让顾问为你匹配第一款私享伴侣</h2>
           <p>
-            当前网站为纯前端展示页，预约入口用于引导成人仿生伴侣咨询。实际项目可继续接入表单、客服或企业微信。
+            留下意向后，私享顾问可基于预算、空间、审美与互动边界，为你推荐更合适的型号与定制路径。
           </p>
         </div>
         <div className="contact-card">
