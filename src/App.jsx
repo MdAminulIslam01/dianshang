@@ -20,17 +20,17 @@ import {
   Users,
   Wand2,
 } from "lucide-react";
-import heroRobot from "./assets/hero-robot.png";
-import robotBusiness from "./assets/robot-business.png";
-import robotElegance from "./assets/robot-elegance.png";
-import robotGallery from "./assets/robot-gallery.png";
-import robotHome from "./assets/robot-home.png";
+import companionA3 from "./assets/companion-a3.png";
+import companionGallery from "./assets/companion-gallery.png";
+import companionHero from "./assets/companion-hero.png";
+import companionS1 from "./assets/companion-s1.png";
+import companionX7 from "./assets/companion-x7.png";
 
 const products = [
   {
     name: "宸影 S1",
     positioning: "私人亲密型",
-    image: robotElegance,
+    image: companionS1,
     description: "面向成年人私人空间，主打情感互动、亲密陪伴、偏好记忆与高隐私定制体验。",
     tags: ["成人AI性伴侣", "情感互动", "隐私定制"],
     price: "定制咨询",
@@ -40,7 +40,7 @@ const products = [
   {
     name: "曜境 X7",
     positioning: "奢华伴侣型",
-    image: robotBusiness,
+    image: companionX7,
     description: "为高端住宅、会所与私人套房打造，强调沉浸陪伴、仪式感服务与专属形象配置。",
     tags: ["高端私享", "关系偏好", "形象定制"],
     price: "专属方案",
@@ -50,7 +50,7 @@ const products = [
   {
     name: "澜玥 A3",
     positioning: "居家伴侣型",
-    image: robotHome,
+    image: companionA3,
     description: "兼顾日常生活陪伴、智能家居联动与夜间私密互动，让伴侣体验自然融入居家空间。",
     tags: ["居家陪伴", "氛围联动", "主动关怀"],
     price: "预约方案",
@@ -162,7 +162,7 @@ function App() {
           </div>
         </div>
         <div className="hero-visual" aria-label="高端成人仿生伴侣主视觉">
-          <img src={heroRobot} alt="高端成人仿生伴侣半身主视觉" />
+          <img src={companionHero} alt="高端真人质感成人仿生伴侣主视觉" />
           <div className="visual-panel">
             <p>Private Edition</p>
             <strong>从第一眼开始定制吸引力</strong>
@@ -237,7 +237,7 @@ function App() {
       </section>
 
       <section className="wide-banner" aria-label="成人仿生伴侣展示">
-        <img src={robotGallery} alt="多款高端成人仿生伴侣展示" />
+        <img src={companionGallery} alt="多款高端真人质感成人仿生伴侣展示" />
         <div className="banner-copy">
           <p className="eyebrow">Private Companion System</p>
           <h2>从外观、声音到关系偏好，把吸引力做成专属版本</h2>
